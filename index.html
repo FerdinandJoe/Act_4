@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head style="background-color: black;">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>𝒇𝒐𝒐𝒅𝒔 𝒍𝒊𝒔𝒕</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style type="text/css">
+      .alert {
+        text-align: center;
+      }
+      table {
+        margin-top: 50px;
+      }
+      .table-responsive {
+        display: table;
+      }
+      #updateRecord {
+        display: none;
+      }
+      .width-52 {
+        width: 500px;
+        background-color: yellowgreen;
+       
+
+      }
+    </style>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="jumbotron text-center">
+
+        <div class="thumbnail">
+            <img src="2.png">
+        </div>
+      
+      <h1 style="color: rgb(0, 0, 0);">𝒇𝒐𝒐𝒅𝒔 𝒍𝒊𝒔𝒕</h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter new foods here"
+            id="recordName"
+            autocomplete="off"
+          />
+        </div>
+        <div class="col">
+          <button
+            class="btn btn-primary"
+            onclick="insertRecord()"
+            id="addNewRecord"
+          >
+            Add <i class="fa fa-plus"></i>
+          </button>
+          <button
+            class="btn btn-primary"
+            onclick="updateList()"
+            id="updateRecord"
+          >
+            Update Record <i class="fa fa-edit"></i>
+          </button>
+          <input type="hidden" name="hiddenRecordId" id="hiddenRecordId" />
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+    <table class="table table-striped" id="table"></table>
+    <div
+      class="alert alert-warning alert-dismissible fade show"
+      id="infoBox"
+      role="alert"
+    >
+     <p style=color:black> Click Add to Input foods on the List!</p>
+    </div>
+  </body>
+</html>
